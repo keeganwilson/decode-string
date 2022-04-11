@@ -1,6 +1,7 @@
 // Write your code below this line
 const decoder = str => {
-    let num = Number(str[0]);
+    str = str.toLowerCase();
+    let num = +(str[0]);
     let decoded = [];
     for (let i = 1; i < str.length; i++) {
         let charCode = str[i].charCodeAt() + num
@@ -12,4 +13,6 @@ const decoder = str => {
     return decoded.join('')
 }
 
-console.log(decoder('8z'));
+console.log(decoder('1a'));
+console.log(decoder('3ce'));
+console.log(decoder('2fcjjm'));
